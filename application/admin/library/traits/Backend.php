@@ -227,9 +227,7 @@ trait Backend
         if ($ids) {
             if ($this->request->has('params')) {
                 parse_str($this->request->post("params"), $values);
-                if (!$this->auth->isSuperAdmin()) {
-                    $values = array_intersect_key($values, array_flip(is_array($this->multiFields) ? $this->multiFields : explode(',', $this->multiFields)));
-                }
+                $values = array_intersect_key($values, array_flip(is_array($this->multiFields) ? $this->multiFields : explode(',', $this->multiFields)));
                 if ($values) {
                     $adminIds = $this->getDataLimitAdminIds();
                     if (is_array($adminIds)) {

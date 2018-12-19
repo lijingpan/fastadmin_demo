@@ -43,10 +43,6 @@ class Auth extends \fast\Auth
             $this->setError('Username is incorrect');
             return false;
         }
-        if ($admin['status'] == 'hidden') {
-            $this->setError('Admin is forbidden');
-            return false;
-        }
         if (Config::get('fastadmin.login_failure_retry') && $admin->loginfailure >= 10 && time() - $admin->updatetime < 86400) {
             $this->setError('Please try again after 1 day');
             return false;
@@ -138,7 +134,6 @@ class Auth extends \fast\Auth
      * 检测当前控制器和方法是否匹配传递的数组
      *
      * @param array $arr 需要验证权限的数组
-     * @return bool
      */
     public function match($arr = [])
     {
@@ -437,7 +432,7 @@ class Auth extends \fast\Auth
     /**
      * 设置错误信息
      *
-     * @param string $error 错误信息
+     * @param $error 错误信息
      * @return Auth
      */
     public function setError($error)

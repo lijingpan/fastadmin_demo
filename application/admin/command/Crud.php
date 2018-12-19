@@ -844,7 +844,7 @@ class Crud extends Command
             // 生成视图文件
             $result = $this->writeToFile('add', $data, $addFile);
             $result = $this->writeToFile('edit', $data, $editFile);
-            $result = $this->writeToFile('index', $data, $indexFile);
+            $result = $this->writeToFile('car', $data, $indexFile);
             // 生成JS文件
             $result = $this->writeToFile('javascript', $data, $javascriptFile);
             // 生成语言文件

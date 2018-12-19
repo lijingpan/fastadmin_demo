@@ -558,14 +558,14 @@ form.form-horizontal .control-label {
   float: left;
   background: none;
   margin-left: 0;
-  min-width: 80px;
+  width: 80px;
   clear: none;
 }
 #treeview .jstree-leaf {
   float: left;
   margin-left: 0;
   padding-left: 24px;
-  min-width: 80px;
+  width: 80px;
   clear: none;
   color: #777;
 }
@@ -959,7 +959,7 @@ table.table-nowrap thead > tr > th {
   }
   .main-sidebar,
   .left-side {
-    padding-top: 50px;
+    padding-top: 94px;
   }
   .n-bootstrap .n-right {
     margin-top: 0;

@@ -145,6 +145,7 @@ class Backend extends Controller
             }
         }
 
+
         // 非选项卡时重定向
         if (!$this->request->isPost() && !IS_AJAX && !IS_ADDTABS && !IS_DIALOG && input("ref") == 'addtabs') {
             $url = preg_replace_callback("/([\?|&]+)ref=addtabs(&?)/i", function ($matches) {
@@ -202,12 +203,14 @@ class Backend extends Controller
         //加载当前控制器语言包
         $this->loadlang($controllername);
         //渲染站点配置
+
         $this->assign('site', $site);
         //渲染配置信息
         $this->assign('config', $config);
         //渲染权限对象
         $this->assign('auth', $this->auth);
         //渲染管理员对象
+
         $this->assign('admin', Session::get('admin'));
     }
 

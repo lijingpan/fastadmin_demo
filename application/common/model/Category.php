@@ -56,7 +56,7 @@ class Category Extends Model
 
     public function getFlagList()
     {
-        return ['hot' => __('Hot'), 'index' => __('Index'), 'recommend' => __('Recommend')];
+        return ['hot' => __('Hot'), 'car' => __('car'), 'recommend' => __('Recommend')];
     }
 
     public function getFlagTextAttr($value, $data)

@@ -1,7 +1,7 @@
 <?php
 
 return array (
-  'name' => 'FastAdmin',
+  'name' => '车速递',
   'beian' => '',
   'cdnurl' => '',
   'version' => '1.0.1',
@@ -29,7 +29,7 @@ return array (
     'example' => 'Example',
   ),
   'mail_type' => '1',
-  'mail_smtp_host' => 'smtp.qq.com',
+  'mail_smtp_host' => 'jingpan.li@chesudi.com',
   'mail_smtp_port' => '465',
   'mail_smtp_user' => '10000',
   'mail_smtp_pass' => 'password',
